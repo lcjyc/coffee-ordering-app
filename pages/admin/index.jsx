@@ -1,4 +1,4 @@
-import axios from "axios";
+import { axiosInstance } from "../../util/config";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "../../styles/Admin.module.css";
@@ -12,7 +12,7 @@ const Index = ({ orders }) => {
     const currentStatus = item.status;
 
     try {
-      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
+      const res = await axiosInstance.put("/orders/" + id, {
         status: currentStatus + 1,
       });
       setOrderList([
@@ -77,7 +77,7 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-  const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const orderRes = await axiosInstance.get("/orders");
   return {
     props: {
       orders: orderRes.data,
