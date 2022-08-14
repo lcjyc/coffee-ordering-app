@@ -1,0 +1,40 @@
+.container {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+.img {
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #3596cb;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.desc {
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 50%;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .desc {
+    display: none;
+  }
+}

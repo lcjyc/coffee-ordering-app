@@ -1,0 +1,120 @@
+.container {
+  height: 12vh;
+  padding: 0px 50px;
+  background-color: rgb(181, 149, 117);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.item {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(2) {
+  flex: 5;
+}
+
+.item:nth-child(3) {
+  justify-content: end;
+}
+
+.callButton {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.texts {
+  margin-left: 20px;
+  color: white;
+}
+
+.text:first-child {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text:last-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+
+.sign {
+  margin: 20px 30px 0px 0px;
+}
+
+.listItem {
+  margin-right: 30px;
+  font-weight: 350;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.cart {
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: rgb(231, 174, 116);
+}
+
+.admin {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0px 10px;
+  }
+
+  .item:nth-child(1) {
+    display: none;
+  }
+
+  .item:nth-child(3) {
+    display: none;
+  }
+
+  .listItem {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+
+  .sign {
+    display: none;
+  }
+
+  .cart {
+    margin-left: 5px;
+  }
+}

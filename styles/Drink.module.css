@@ -1,0 +1,161 @@
+.container {
+  height: 75vh;
+  display: flex;
+  padding: 20px 10px;
+}
+
+.left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+}
+
+.imgContainer {
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+.title {
+  font-size: 40px;
+  color: #5e3906;
+}
+
+.desc {
+  font-size: 20px;
+  color: #b1874d;
+  margin-bottom: 50px;
+}
+
+.choose {
+  font-size: 22px;
+  color: #5e3906;
+  margin-bottom: 20px;
+}
+
+.temperature {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+}
+
+.sizes {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.size {
+  position: relative;
+  cursor: pointer;
+}
+
+.size:nth-child(1) {
+  width: 45px;
+  height: 45px;
+}
+
+.size:last-child {
+  width: 55px;
+  height: 55px;
+}
+
+.number {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  background-color: teal;
+  color: white;
+  font-size: 12px;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+
+.price {
+  color: #3f6591;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.quantity {
+  width: 50px;
+  height: 30px;
+}
+
+.button {
+  height: 30px;
+  margin-left: 10px;
+  background-color: rgb(198, 154, 110);
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .imgContainer {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .title {
+    margin: 5px;
+  }
+
+  .sizes {
+    width: 100%;
+    padding: 0px 20px;
+    justify-content: space-around;
+  }
+
+  .option {
+    font-size: 18px;
+    margin-left: 70px;
+    justify-content: space-between;
+  }
+
+  .radio {
+    width: 15px;
+    height: 15px;
+  }
+
+  .quantity {
+    margin-right: 5px;
+    height: 50px;
+    padding: 10px 20px;
+  }
+
+  .button {
+    height: 50px;
+    padding: 10px 20px;
+  }
+}

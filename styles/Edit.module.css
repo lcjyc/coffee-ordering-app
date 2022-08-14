@@ -1,0 +1,55 @@
+.container {
+  padding: 30px 50px;
+  display: flex;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+}
+
+.drinks {
+  display: flex;
+}
+
+.title {
+  padding: 0px 60px 0px 20px;
+  color: #5e3906;
+  font-size: 32px;
+}
+
+.addButton {
+  padding: 10px;
+  margin: 20px;
+  background-color: #e6983a;
+  width: 150px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.table {
+  border-spacing: 20px;
+}
+
+.trTitle {
+  color: rgb(141, 116, 91);
+  font-size: 20px;
+  font-weight: 500;
+  box-shadow: 0 1px;
+}
+
+.product {
+  color: #3f6591;
+  font-weight: bold;
+}
+
+.beans {
+  display: flex;
+}

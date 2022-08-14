@@ -1,0 +1,57 @@
+.container {
+  padding: 50px;
+  display: flex;
+}
+
+.order {
+  flex: 1;
+}
+
+.title {
+  color: #5e3906;
+  margin-left: 20px;
+}
+
+.trTitle {
+  color: rgb(181, 149, 117);
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 20px;
+  text-align: left;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.button:first-child {
+  background-color: teal;
+  margin-right: 10px;
+}
+
+.button:last-child {
+  background-color: crimson;
+}
+
+.edit {
+  padding: 10px;
+  margin: 20px;
+  background-color: #e6983a;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
