@@ -1,5 +1,5 @@
 import DrinkCard from "../components/DrinkCard";
-import axios from "axios";
+import { axiosInstance } from "../util/config";
 import styles from "../styles/Drinks.module.css";
 
 const Drinks = ({ drinkList }) => {
@@ -21,7 +21,7 @@ const Drinks = ({ drinkList }) => {
 };
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api/drinks");
+  const res = await axiosInstance.get("/drinks");
   return {
     props: {
       drinkList: res.data,
