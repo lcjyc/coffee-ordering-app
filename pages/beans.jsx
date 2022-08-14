@@ -1,5 +1,5 @@
 import BeanCard from "../components/BeanCard";
-import axios from "axios";
+import { axiosInstance } from "../../util/config";
 import styles from "../styles/Beans.module.css";
 
 const Beans = ({ beanList }) => {
@@ -19,7 +19,7 @@ const Beans = ({ beanList }) => {
 };
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api/beans");
+  const res = await axiosInstance.get("/beans");
   return {
     props: {
       beanList: res.data,
