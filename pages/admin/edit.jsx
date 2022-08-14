@@ -13,7 +13,7 @@ const Edit = ({ drinks, beans }) => {
 
   const handleDeleteDrink = async (id) => {
     try {
-      await axiosInastance.delete("/drinks/" + id);
+      await axiosInstance.delete("/drinks/" + id);
       alert("Product has been deleted.");
       window.location.reload();
       setDrinkList(drinkList.filter((drink) => drink._id !== id));
