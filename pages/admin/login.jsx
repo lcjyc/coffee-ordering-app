@@ -1,4 +1,4 @@
-import axios from "axios";
+import { axiosInstance } from "../../util/config";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "../../styles/Login.module.css";
@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post("http://localhost:3000/api/login", {
+      await axiosInstance.post("/login", {
         username,
         password,
       });
