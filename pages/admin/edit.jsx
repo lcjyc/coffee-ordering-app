@@ -1,4 +1,4 @@
-import axios from "axios";
+import { axiosInstance } from "../../util/config";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/Edit.module.css";
@@ -13,7 +13,7 @@ const Edit = ({ drinks, beans }) => {
 
   const handleDeleteDrink = async (id) => {
     try {
-      await axios.delete("http://localhost:3000/api/drinks/" + id);
+      await axiosInastance.delete("/drinks/" + id);
       alert("Product has been deleted.");
       window.location.reload();
       setDrinkList(drinkList.filter((drink) => drink._id !== id));
@@ -24,7 +24,7 @@ const Edit = ({ drinks, beans }) => {
 
   const handleDeleteBean = async (id) => {
     try {
-      await axios.delete("http://localhost:3000/api/beans/" + id);
+      await axiosInstance.delete("/beans/" + id);
       alert("Product has been deleted.");
       window.location.reload();
       setBeanList(beanList.filter((bean) => bean._id !== id));
@@ -145,8 +145,8 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const drinkRes = await axios.get("http://localhost:3000/api/drinks");
-  const beanRes = await axios.get("http://localhost:3000/api/beans");
+  const drinkRes = await axiosInstance.get("/drinks");
+  const beanRes = await axiosInstance.get("/beans");
 
   return {
     props: {
