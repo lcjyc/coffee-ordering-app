@@ -1,6 +1,4 @@
-import axios from "axios";
 import Head from "next/head";
-import { useState } from "react";
 import CoverList from "../components/CoverList";
 import Featured from "../components/Featured";
 import styles from "../styles/Home.module.css";
