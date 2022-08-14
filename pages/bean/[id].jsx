@@ -1,6 +1,6 @@
 import styles from "../../styles/Bean.module.css";
 import Image from "next/image";
-import axios from "axios";
+import { axiosInstance } from "../../util/config";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/cartSlice";
@@ -88,7 +88,7 @@ const Bean = ({ bean }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`http://localhost:3000/api/beans/${params.id}`);
+  const res = await axiosInstance.get(`/beans/${params.id}`);
   return {
     props: {
       bean: res.data,
