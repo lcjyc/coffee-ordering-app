@@ -21,20 +21,6 @@ export default async function handler(req, res) {
     }
   }
 
-  if (method === "PUT") {
-    if (!token || token !== process.env.TOKEN) {
-      return res.status(401).json("Not authenticated!");
-    }
-    try {
-      const bean = await Bean.findByIdAndUpdate(id, req.body, {
-        new: true,
-      });
-      res.status(201).json(bean);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  }
-
   if (method === "DELETE") {
     if (!token || token !== process.env.TOKEN) {
       return res.status(401).json("Not authenticated!");
