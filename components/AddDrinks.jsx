@@ -1,7 +1,7 @@
 import styles from "../styles/AddDrinks.module.css";
 import { useState } from "react";
 import axios from "axios";
-import { useRouter } from "next/router";
+import { axiosInstance } from "../util/config";
 
 const AddDrinks = ({ setAddDrinks }) => {
   const [file, setFile] = useState(null);
@@ -39,7 +39,7 @@ const AddDrinks = ({ setAddDrinks }) => {
         temp,
         img: url,
       };
-      await axios.post("http://localhost:3000/api/drinks", newProduct);
+      await axiosInstance.post("/drinks", newProduct);
       alert("New Product has been created!");
       window.location.reload();
     } catch (err) {
