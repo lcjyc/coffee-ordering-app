@@ -1,5 +1,6 @@
 import styles from "../styles/AddBeans.module.css";
 import { useState } from "react";
+import axios from "axios";
 import { axiosInstance } from "../util/config";
 
 const AddBeans = ({ setAddBeans }) => {
@@ -38,7 +39,7 @@ const AddBeans = ({ setAddBeans }) => {
         roast,
         img: url,
       };
-      await axiosInstance.post("https://coffee-ordering.vercel.app/api/beans", newProduct);
+      await axiosInstance.post("/beans", newProduct);
       alert("New Product has been created!");
       window.location.reload();
     } catch (err) {
