@@ -1,7 +1,6 @@
 import styles from "../styles/AddBeans.module.css";
 import { useState } from "react";
-import axios from "axios";
-import { useRouter } from "next/router";
+import { axiosInstance } from "../util/config";
 
 const AddBeans = ({ setAddBeans }) => {
   const [file, setFile] = useState(null);
@@ -39,7 +38,7 @@ const AddBeans = ({ setAddBeans }) => {
         roast,
         img: url,
       };
-      await axios.post("http://localhost:3000/api/beans", newProduct);
+      await axiosInstance.post("https://coffee-ordering.vercel.app/api/beans", newProduct);
       alert("New Product has been created!");
       window.location.reload();
     } catch (err) {
