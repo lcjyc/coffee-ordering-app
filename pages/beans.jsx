@@ -1,5 +1,5 @@
 import BeanCard from "../components/BeanCard";
-import { axiosInstance } from "../../util/config";
+import { axiosInstance } from "../util/config";
 import styles from "../styles/Beans.module.css";
 
 const Beans = ({ beanList }) => {
