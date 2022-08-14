@@ -1,6 +1,6 @@
 import styles from "../../styles/Drink.module.css";
 import Image from "next/image";
-import axios from "axios";
+import { axiosInstance } from "../../util/config";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/cartSlice";
@@ -89,7 +89,7 @@ const Drink = ({ coffee }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`http://localhost:3000/api/drinks/${params.id}`);
+  const res = await axiosInstance.get(`/drinks/${params.id}`);
   return {
     props: {
       coffee: res.data,
