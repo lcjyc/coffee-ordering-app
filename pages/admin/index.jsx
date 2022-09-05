@@ -12,7 +12,7 @@ const Index = ({ orders }) => {
     const currentStatus = item.status;
 
     try {
-      const res = await axiosInstance.put("/orders/" + id, {
+      const res = await axiosInstance.put("orders/" + id, {
         status: currentStatus + 1,
       });
       setOrderList([
